@@ -1,10 +1,12 @@
 import './App.css'
-import ApiLap from "./Comp/ApiLap";
+// import ApiLap from "./Comp/ApiLap";
+import Status from "./Comp/Status";
 function App() {
 
   return (
     <>
-    <ApiLap/>
+    {/* <ApiLap/> */}
+    <Status/>
     </>
   )
 }
