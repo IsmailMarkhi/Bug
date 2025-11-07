@@ -1,10 +1,10 @@
 import './App.css'
-import FocusInput from './Comp/FocusInput';
+import FactorialCalculator from './Comp/FactorialCalculator';
 function App() {
 
   return (
     <>
-    <FocusInput/>
+    <FactorialCalculator/>
     </>
   )
 }
