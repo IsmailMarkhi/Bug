@@ -1,10 +1,10 @@
 import './App.css'
-import TodoApp from './Comp/TodoApp';
+import FocusInput from './Comp/FocusInput';
 function App() {
 
   return (
     <>
-    <TodoApp/>
+    <FocusInput/>
     </>
   )
 }
