@@ -1,10 +1,10 @@
 import './App.css'
-import FactorialCalculator from './Comp/FactorialCalculator';
+import Cart from './Comp/Cart';
 function App() {
 
   return (
     <>
-    <FactorialCalculator/>
+    <Cart/>
     </>
   )
 }
