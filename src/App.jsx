@@ -1,12 +1,30 @@
-import './App.css'
-import Cart from './Comp/Cart';
-function App() {
+// import Params from "./Markhi/Params";
 
-  return (
-    <>
-    <Cart/>
-    </>
-  )
+// function App() {
+//   const ite = [
+//     { name: "flan", age: 13, email: "flan@edu.ma" },
+//     { name: "med", age: 20, email: "med@edu.ma" },
+//   ];
+
+//   return (
+//     <>
+//       <Params name="Med" age={20} email="kkk@" />
+
+//       {ite.map((item, id) => (
+//         <p key={id}>
+//           <Params
+//             name={item.name}
+//             age={item.age}
+//             email={item.email}
+//           />
+//         </p>
+//       ))}
+//     </>
+//   );
+// }
+import TypeSearch from "./Comp/TypeSearch"
+function App(){
+  return(<TypeSearch/>)
 }
+ export default App;
 
-export default App

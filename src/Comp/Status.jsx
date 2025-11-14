@@ -11,3 +11,9 @@ export default function Status() {
     </div>
   );
 }
+//sfc
+/*
+const name=(par)=>{}
+  const arr=["banan","hhhh"];
+  arr.map((i,index)=>{<h1 key={index}>{i}</h1>})//
+*/
