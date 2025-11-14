@@ -14,6 +14,8 @@ export default function TypeSearch() {
   ];//cont(type)==type[Liste]==>Liste(nom)
   const [cont, setCont] = useState([]);
   const [srh, setSrh] = useState("");
+
+  const Result=Liste.filter((i,id)=>(i.type==cont));
   return (
     <>
       <input type="search" value={srh}
@@ -25,7 +27,7 @@ export default function TypeSearch() {
       <label>le type: {srh}</label>
       <br />
       {
-        Liste.filter((i,id)=>(i.type==cont)).map((item,id)=>(<ul key={id}><li>{item.nom}</li></ul>))
+        Result.map((item,id)=>(<ul key={id}><li>{item.nom}</li></ul>))
       }
     </>
   );
