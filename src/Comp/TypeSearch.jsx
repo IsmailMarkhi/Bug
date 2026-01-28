@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function TypeSearch() {
-  const Liste = [
+  const Fruits = [
     { nom: "banane", type: "fruit" },
     { nom: "orange", type: "fruit" },
     { nom: "pomme", type: "fruit" },
@@ -11,24 +11,26 @@ export default function TypeSearch() {
     { nom: "pomme de terre", type: "legume" },
     { nom: "navet", type: "legume" },
     { nom: "poivron", type: "legume" },
-  ];//cont(type)==type[Liste]==>Liste(nom)
-  const [cont, setCont] = useState([]);
-  const [srh, setSrh] = useState("");
-
-  const Result=Liste.filter((i,id)=>(i.type==cont));
-  return (
+  ];
+  const [inpt,setInpt]=useState("");
+  const [search,setSearch]=useState("");
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    setSearch(inpt);
+  };
+  const Filtred=Fruits.filter(i=>i.type.includes(search.toLowerCase().trim()));
+  return(
     <>
-      <input type="search" value={srh}
-        onChange={(e) => setSrh(e.target.value)}
-      />
-      <br />
-      <button type="button" onClick={()=>{setCont([...cont,srh.toLocaleLowerCase()])}}>Cherher</button>
-      <br />
-      <label>le type: {srh}</label>
-      <br />
-      {
-        Result.map((item,id)=>(<ul key={id}><li>{item.nom}</li></ul>))
-      }
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={inpt} onChange={(e)=>setInpt(e.target.value)}/><br/><br/>
+      <button type="submit">Search</button>
+    </form>
+  <ul>
+    {search&&Filtred.map((i)=>(
+        <li key={i.nom}>{i.nom}</li>
+      ))
+    }
+  </ul>
     </>
   );
 }

@@ -22,9 +22,8 @@
 //     </>
 //   );
 // }
-import TypeSearch from "./Comp/TypeSearch"
+import CounterRedux from "./Comp/Redux/CounterRedux"
 function App(){
-  return(<TypeSearch/>)
+  return(<CounterRedux/>);
 }
  export default App;
-
