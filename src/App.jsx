@@ -22,8 +22,8 @@
 //     </>
 //   );
 // }
-import CounterRedux from "./Comp/Redux/CounterRedux"
+import TodoRedux from "./Comp/Redux2/TodoRedux"
 function App(){
-  return(<CounterRedux/>);
+  return(<TodoRedux/>);
 }
  export default App;
