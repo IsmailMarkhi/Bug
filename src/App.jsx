@@ -22,8 +22,8 @@
 //     </>
 //   );
 // }
-import TodoRedux from "./Comp/Redux2/TodoRedux"
+import TodoReda from "./Comp/Redux444/TodoReda"
 function App(){
-  return(<TodoRedux/>);
+  return(<TodoReda/>);
 }
  export default App;

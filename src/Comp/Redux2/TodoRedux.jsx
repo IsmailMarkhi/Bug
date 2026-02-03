@@ -4,6 +4,8 @@ export default function TodoRedux(){
   const todos=useSelector(state=>state.todo);
   const dispatch=useDispatch();
   const [input,setInput]=useState("");
+  const [New,setNew]=useState("");
+  const [ToEditIndex,setToEditIndex]=useState(null);
   return(
     <>
     <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
@@ -14,6 +16,18 @@ export default function TodoRedux(){
       }}>add</button>
       <br />
       <hr />
+      {ToEditIndex!==null()&&
+      (
+        <>
+        <input type="text" value={New} onChange={e=>setNew(e.target.value)}/>
+        <button onClick={()=>{
+          if(!New.trim()) return;
+          setNew("");
+          dispatch({type:"EDIT",text:New.trim(),payload:{ToEditIndex}})
+          setToEditIndex(null);
+        }}>save</button>
+        </>
+      )}
       <br />
       {todos.length!=[]&&(
       <table border={2}>
@@ -29,6 +43,9 @@ export default function TodoRedux(){
               <td>{item}</td>
               <td>
                 <button onClick={()=>{dispatch({type:"DELETE",payload:{index}})}}>delete</button>
+                <button onClick={()=>{
+                  setToEditIndex(index);
+                  }}>Edit</button>
               </td>
             </tr>
           ))}
