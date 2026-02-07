@@ -22,8 +22,8 @@
 //     </>
 //   );
 // }
-import TodoReda from "./Comp/Redux444/TodoReda"
+import TodoComp from "./Rtoolkit/TodoComp"
 function App(){
-  return(<TodoReda/>);
+  return(<TodoComp/>);
 }
  export default App;
