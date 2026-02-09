@@ -22,7 +22,6 @@ export default function ListProductsActivity(){
                         <h1>{i.name}</h1>
                         <p>Quantite: {i.quantity}</p>
                     </div>
-
                     </>
                 ))
             }

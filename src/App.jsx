@@ -22,8 +22,12 @@
 //     </>
 //   );
 // }
-import ConsomeApiAxios from "./Api'S/ConsomeApiAxios"
+import ApiParams from "./Api'S/ApiWithParam/ApiParams"
+import Routing from "./Api'S/ApiWithParam/Routing"
 function App(){
-  return(<ConsomeApiAxios/>);
+  return(<>
+  <ApiParams/>
+  <Routing/>
+  </>);
 }
  export default App;
