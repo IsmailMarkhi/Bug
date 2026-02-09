@@ -22,12 +22,8 @@
 //     </>
 //   );
 // }
-import ApiParams from "./Api'S/ApiWithParam/ApiParams"
-import Routing from "./Api'S/ApiWithParam/Routing"
+import CounterComponent from "./RtoolkitCounter/CounterComponent";
 function App(){
-  return(<>
-  <ApiParams/>
-  <Routing/>
-  </>);
+  return(<CounterComponent/>);
 }
  export default App;
